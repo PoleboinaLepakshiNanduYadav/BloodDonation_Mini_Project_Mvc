@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+@model  BloodDonation_Mini_Project_Mvc.Models.BloodData
+<h2>Login</h2>
+<div>
+    @using(Html.BeginForm())
+     {
+        <p>@Html.ActionLink("Back To Main Page","Welcome")</p>
+    <table align="center" border="1" color="red">
+        <tr>
+            <th>Id</th>
+            <td>@Html.TextBoxFor(model => model.Id)</td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>@Html.TextBoxFor(model => model.Password)</td>
+        </tr>
+        <tr>
+            <th>@ViewBag.Message</th>
+            <td><input type="submit" name="B1" value="Login" /></td>
+        </tr>
+    </table>
+     }
+</div>

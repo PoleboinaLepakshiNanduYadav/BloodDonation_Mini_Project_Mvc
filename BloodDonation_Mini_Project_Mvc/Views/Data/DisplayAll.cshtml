@@ -1,0 +1,46 @@
+﻿@using BloodDonation_Mini_Project_Mvc.Models
+@{
+    ViewBag.Title = "DisplayAll";
+}
+<h2>DisplayAll</h2>
+<div>
+    @using(Html.BeginForm())
+    {
+    <table>@Html.ActionLink("Create", "BloodRegistration")&nbsp;|&nbsp;@Html.ActionLink("About", "About")</table>
+        <table align="center" border="1">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>BloodBankName</th>
+                <th>Address</th>
+                <th>ContactNumber</th>
+                <th>Password</th>
+                <th>City</th>
+                <th>Age</th>
+                <th>BloodGroup</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            @foreach (BloodData BD in Model)
+            {
+        <tr>
+            <td>@Html.DisplayFor(model => BD.Id)</td>
+            <td>@Html.DisplayFor(model => BD.Name)</td>
+            <td>@Html.DisplayFor(model => BD.BloodBankName)</td>
+            <td>@Html.DisplayFor(model => BD.Address)</td>
+            <td>@Html.DisplayFor(model => BD.ContactNumber)</td>
+            <td>@Html.DisplayFor(model => BD.Password)</td>
+            <td>@Html.DisplayFor(model => BD.City)</td>
+            <td>@Html.DisplayFor(model => BD.Age)</td>
+            <td>@Html.DisplayFor(model => BD.BloodGroup)</td>
+            <td>@Html.ActionLink("View", "ViewEmp",new {Id=BD.Id})</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { Id = BD.Id })</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { Id = BD.Id })</td>
+        </tr>
+            }
+
+        </table>
+    }
+</div>
+
