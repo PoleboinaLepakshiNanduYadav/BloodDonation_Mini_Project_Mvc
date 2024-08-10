@@ -1,0 +1,1 @@
+This is ABout bring Awerness in donating the blood int the youth,I did this project while working out in the Asp.net Mvc frame work for login pages, whether i can create the login in to other pages or redirecting to other pages and i did it and along with it i build this what i learned from my coching by displaying the list of registered donors and about it.
